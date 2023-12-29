@@ -1,0 +1,31 @@
+
+.custom-input{
+    background-color: rgba(48, 19, 64, 0.4);
+    color: var(--white);
+    border: 1px solid var(--purple-grey);
+    border-radius: 0.35rem;
+    font-size: 1rem;
+
+    padding: 0.8rem 1rem;
+    font-weight: 500;
+    width:100%;
+    margin-block: 0.8rem;
+
+    transition: all 0.26s;
+}
+
+.custom-input :focus{
+    outline: none;
+    border-color: var(--white);
+}
+
+.custom-input::placeholder{
+    color: var(--purple-grey);
+}
+
+.custom-input:hover{
+    cursor: pointer;
+    border-color: var(--white);
+    transform: scale(1.03);
+    
+}

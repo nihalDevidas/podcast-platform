@@ -1,0 +1,41 @@
+
+.navBar{
+    display:flex;
+    justify-content: center;
+    padding: 1.6rem;
+}
+
+.links{
+    display:flex;
+    column-gap: 2.5rem;
+}
+
+.links  a{
+    color: rgba(146, 144, 144, 0.7);
+    text-decoration: none;
+    transition: all 0.16s;
+    font-size: 1.1rem;
+    font-weight: 500;
+    
+}
+.links .active{
+    color:rgb(206, 226, 226);
+}
+
+.links a:hover{
+    color:rgb(206, 226, 226);
+}
+
+/* style fro gradiant div */
+.gradient{
+    position:absolute;
+    width:800px;
+    height:120px;
+    margin-inline: auto;
+    background-color: var(--blue);
+    filter: blur(100px);
+    
+    top:-70px;
+    z-index : -1;
+
+}

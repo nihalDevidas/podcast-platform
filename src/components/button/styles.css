@@ -1,0 +1,20 @@
+
+.custom-btn{
+
+    background-color: rgba(48, 19, 64, 0.4);
+    color: var(--off-white);
+    border: 2px solid var(--off-white);
+    border-radius: 0.35rem;
+    font-size: 1rem;
+
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+    width:100%;
+    margin-block: 0.8rem;
+
+    transition: all 0.16s;
+}
+.custom-btn:hover{
+    background-color: var( --off-white);
+    color: var(--theme);
+}
