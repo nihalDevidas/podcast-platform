@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import Header from "../components/Header/index"
 import SinUpForm from '../components/sinUpComponents/SinUpForm/index';
 import LoginForm from "../components/sinUpComponents/LoginForm/index";
 import Para from "../components/paragraph/index"
@@ -14,6 +15,7 @@ const SignUp = () => {
 
   return (
     <div>
+        <Header/>
         <div className='input-wrapper'>
 
           {!registered ? <h1>Sign Up</h1> : <h1>Login</h1>}
