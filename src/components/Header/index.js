@@ -8,7 +8,7 @@ const Header = () => {
         
         <div className='gradient'></div>
         <div className='links'>
-            <NavLink to = "/" >SignUp</NavLink>
+            <NavLink to = "/podcast-platform" >SignUp</NavLink>
             <NavLink to = "/podcasts" >Podcasts</NavLink>
             <NavLink to = "/start-a-podcast" >Start A Podcast</NavLink>
             <NavLink to = "/profile" >Profile</NavLink>
