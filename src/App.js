@@ -15,7 +15,7 @@ function App() {
       <ToastContainer/>
 
       <Routes>
-        <Route path = "/"  element = {<SignUp/>}/>
+        <Route path = "/podcast-platform"  element = {<SignUp/>}/>
         <Route path = "/profile"  element = {<ProfilePage/>}/>
       </Routes>
       
