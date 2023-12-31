@@ -1,5 +1,9 @@
 import React,{useState} from 'react'
-import InputComponent from '../../Input/index'
+import InputComponent from '../../Input/index';
+import { useDispatch } from 'react-redux';
+import {setUser} from "../../../slices/userSlice";
+import { useNavigate } from 'react-router-dom';
+
 import Button from "../../button/index";
 import { toast } from 'react-toastify';
 
@@ -15,6 +19,9 @@ const SinUpForm = () => {
     const[password, setPassword] = useState("");
     const[confirmPassword, setConfirmPassword] = useState("");
     const[loading, setLoading] = useState(false);
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
 
     const handleSignUp = async()=>
@@ -41,9 +48,15 @@ const SinUpForm = () => {
                     uid : user.uid
                   })
                   // store user in redux state
+                    dispatch(setUser({             
+                      name: user.name,
+                      email: user.email,
+                      uid : user.uid
+                    }))
                   // sign up sucess tost a message
                   toast.success("signUp success!")
                   setLoading(false);
+                  navigate("/profile");
               }
               catch(e){
                 toast.error(e.message);

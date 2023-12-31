@@ -10,10 +10,12 @@ import store from "../src/store"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
-  <Router>
+  <Router basename = "/podcast-platform">
+
     <Provider store = {store}> 
         <App />
     </Provider>
+    
    </Router>
    
     

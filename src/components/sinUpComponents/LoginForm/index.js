@@ -1,5 +1,9 @@
 import React,{useState} from 'react'
 import InputComponent from '../../Input/index'
+import {useDispatch} from "react-redux"
+import {useNavigate} from "react-router-dom"
+import {setUser} from "../../../slices/userSlice"
+
 import Button from "../../button/index"
 import {toast} from "react-toastify"
 
@@ -14,6 +18,9 @@ const LoginForm = () => {
     const[Email, setEmail] = useState("");
     const[password, setPassword] = useState("");
     const[loading, setLoading] = useState(false);
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
 
     const handleLogin = async()=>
@@ -37,8 +44,14 @@ const LoginForm = () => {
               console.log("user-data", userData);
 
               // store gotten user data in redux state
+              dispatch(setUser({                
+                name: userData.name,
+                email: user.email,
+                uid : user.uid
+              }))
               toast.success("Login successfull")
               setLoading(false)
+              navigate("/profile");
           }
           catch(e){
             console.log("error"+e);
