@@ -1,6 +1,8 @@
 import React,{useEffect} from "react"
 import SignUp from "./pages/SignUp";
 import ProfilePage from "./pages/ProfilePage";
+import CreatePodcast from "./pages/CreatePodcast";
+
 import PrivateRoutes from "./components/privateRoutes/PrivateRoutes";
 import './App.css';
 import {Routes, Route} from "react-router-dom"
@@ -68,6 +70,7 @@ function App() {
 
         <Route element = {<PrivateRoutes/>}>
           <Route path = "/profile"  element = {<ProfilePage/>}/>
+          <Route path = "/create-podcast"  element = {<CreatePodcast/>}/>
         </Route>
         
       </Routes>

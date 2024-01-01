@@ -105,7 +105,7 @@ const SinUpForm = () => {
            placeholder={"Confirm Password"} type={"password"} required = {true}
           />
 
-          <Button text ={loading ?"Loading..": "SignUp"} onClick = {handleSignUp} disabled = {loading}/>
+          <Button text ={loading ?"Loading..": "Signup Now"} onClick = {handleSignUp} disabled = {loading}/>
       
     </>
   )

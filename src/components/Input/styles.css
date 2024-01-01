@@ -5,7 +5,8 @@
     border: 1px solid var(--purple-grey);
     border-radius: 0.35rem;
     font-size: 1rem;
-
+    display:block;
+    
     padding: 0.8rem 1rem;
     font-weight: 500;
     width:100%;
@@ -28,4 +29,8 @@
     border-color: var(--white);
     transform: scale(1.03);
     
+}
+.input-label{
+    color: var(--purple-grey);
+
 }
